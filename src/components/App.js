@@ -1,15 +1,23 @@
-import React from 'react'
-
+import React, {PureComponent} from 'react'
 import NavBar from './NavBar'
+import GifListContainer from '../containers/GifListContainer'
+// the App component should render out the GifListContainer component
 
-// the App component should render out the GifListContainer component 
 
-const App = () => {
+class App extends PureComponent {
+
+
+
+render(){
   return (
     <div>
-        < NavBar color='black' title="Giphy Search" />
+      <NavBar />
+      {/* <div className='ui divider'></div> */}
+      <div className='ui container'>
+        <GifListContainer />
+      </div>
     </div>
-  )
+  )}
 }
 
 export default App
